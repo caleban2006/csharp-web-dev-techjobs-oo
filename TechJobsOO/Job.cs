@@ -5,6 +5,7 @@ namespace TechJobsOO
     {
         public int Id { get; }
         private static int nextId = 1;
+        private string Value;
 
         public string Name { get; set; }
         public Employer EmployerName { get; set; }
@@ -29,6 +30,11 @@ namespace TechJobsOO
             JobCoreCompetency = jobCoreCompetency;
         }
 
+        public Job(string Value) 
+        {
+            this.Value = value;
+        }
+
         // TODO: Generate Equals() and GetHashCode() methods.
 
         public override bool Equals(object obj)
@@ -39,7 +45,7 @@ namespace TechJobsOO
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id);
+            return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
         }
 
     }

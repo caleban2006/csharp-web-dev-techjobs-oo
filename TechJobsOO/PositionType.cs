@@ -22,13 +22,13 @@ namespace TechJobsOO
 
         public override bool Equals(object obj)
         {
-            return obj is Location location &&
-                   Id == location.Id;
+            return obj is PositionType positionType &&
+                   Id == positionType.Id;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id);
+            return HashCode.Combine(Id, Value);
         }
         
         public override string ToString()
