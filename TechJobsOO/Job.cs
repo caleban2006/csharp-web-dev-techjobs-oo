@@ -30,7 +30,7 @@ namespace TechJobsOO
             JobCoreCompetency = jobCoreCompetency;
         }
 
-        public Job(string Value) 
+        public Job(string value) 
         {
             this.Value = value;
         }
