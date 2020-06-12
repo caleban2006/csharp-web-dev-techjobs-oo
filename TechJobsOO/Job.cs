@@ -3,7 +3,7 @@ using System.Net.Http;
 
 namespace TechJobsOO
 {
-    public class Job
+    public class Job 
     {
         public int Id { get; }
         private static int nextId = 1;
@@ -32,12 +32,12 @@ namespace TechJobsOO
             JobCoreCompetency = jobCoreCompetency;
         }
 
-        public Job(string value) 
+        public Job(string value)
         {
             this.Value = value;
         }
 
-        // TODO: Generate Equals() and GetHashCode() methods.
+        //TODO: Generate Equals() and GetHashCode() methods.
 
         public override bool Equals(object obj)
         {
@@ -61,7 +61,13 @@ namespace TechJobsOO
             }
             else
             {
-                 message = "\n" + $"ID: {Id}\n" + $"Name: {(String.IsNullOrEmpty(Name.ToString()) ? notAvailable : Name.ToString())}\n" + $"Employer: {(String.IsNullOrEmpty(EmployerName.ToString()) ? notAvailable : EmployerName.ToString())}\n" + $"Location: {(String.IsNullOrEmpty(EmployerLocation.ToString()) ? notAvailable : EmployerLocation.ToString())}\n" + $"Position Type: {(String.IsNullOrEmpty(JobType.ToString()) ? notAvailable : JobType.ToString())}\n" + $"Core Competency: {(String.IsNullOrEmpty(JobCoreCompetency.ToString()) ? notAvailable : JobCoreCompetency.ToString())}\n" + "\n";
+                 message = "\n" + 
+                    $"ID: {Id}\n" + $"Name: {(String.IsNullOrEmpty(Name.ToString()) ? notAvailable : Name.ToString())}\n" + 
+                    $"Employer: {(String.IsNullOrEmpty(EmployerName.ToString()) ? notAvailable : EmployerName.ToString())}\n" + 
+                    $"Location: {(String.IsNullOrEmpty(EmployerLocation.ToString()) ? notAvailable : EmployerLocation.ToString())}\n" + 
+                    $"Position Type: {(String.IsNullOrEmpty(JobType.ToString()) ? notAvailable : JobType.ToString())}\n" + 
+                    $"Core Competency: {(String.IsNullOrEmpty(JobCoreCompetency.ToString()) ? notAvailable : JobCoreCompetency.ToString())}\n" + 
+                    "\n";
             }
             return message;
         }
